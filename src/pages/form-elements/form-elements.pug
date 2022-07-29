@@ -3,6 +3,7 @@ include ../../components/text-field/text-field
 include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/rating/rating
+include ../../components/checkbox/checkbox
 
 block content
     main.form-elements
@@ -74,3 +75,15 @@ block content
                 .form-elements__rating-wrapper
                     +rating(4)
                     +rating(5)
+                .form-elements__checkbox-wrapper
+                    +checkbox({
+                        name: 'checkbox',
+                        title: 'Можно курить',
+                        checked: true
+                    })
+                    +checkbox({
+                        name: 'checkbox',
+                        title: 'Широкий коридор',
+                        description: 'Ширина коридоров в номере не менее 91 см.',
+                        isRich: true
+                    })
