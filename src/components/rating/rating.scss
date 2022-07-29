@@ -1,0 +1,21 @@
+@import "@variables";
+@import "@mixins";
+
+.rating {
+  @include icons-font;
+  display: flex;
+  gap: 3px;
+  background: $mainLinearGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  &__star-fill::before {
+    content: '\e910';
+  }
+
+  &__star-empty::before {
+    content: '\e911';
+  }
+}

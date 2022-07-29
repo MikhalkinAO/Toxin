@@ -1,0 +1,7 @@
+mixin rating(rating = 0)
+    .rating
+        - for (let i = 0; i < 5; i++)
+            if (i < rating)
+                span.rating__star-fill
+            else
+                span.rating__star-empty

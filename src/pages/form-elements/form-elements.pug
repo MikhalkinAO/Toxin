@@ -2,6 +2,7 @@ extends ../../layouts/ui-kit-layout
 include ../../components/text-field/text-field
 include ../../components/radio/radio
 include ../../components/toggle/toggle
+include ../../components/rating/rating
 
 block content
     main.form-elements
@@ -70,3 +71,6 @@ block content
                         name: "special",
                         title: 'Получать спецпредложения'
                     })
+                .form-elements__rating-wrapper
+                    +rating(4)
+                    +rating(5)
