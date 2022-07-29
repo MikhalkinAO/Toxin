@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.types {
+  max-width: 444px;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    font-family: $mainFont;
+
+    &_h1 {
+      color: $mainTextColor;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    &_h2 {
+      color: $mainTextColor;
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 1.21;
+    }
+
+    &_h3 {
+      color: $mainTextColor;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    &_body {
+      color: $textColor_75;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.71;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 37px;
+    color: $textColor_25;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    margin-left: 30px;
+  }
+}

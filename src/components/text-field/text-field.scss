@@ -1,0 +1,79 @@
+@import '@variables';
+@import '@mixins';
+
+.text-field {
+  position: relative;
+
+  &__input {
+    width: 100%;
+    height: 44px;
+    padding: 0 0 0 15px;
+    border: 1px solid $textColor_25;
+    border-radius: 4px;
+    outline: none;
+    @include font-body;
+
+    &::placeholder {
+      color: $textColor_25;
+    }
+
+    &:hover,
+    &:focus,
+    &_focused {
+      border: 1px solid $textColor_50;
+    }
+
+    &_with-arrow {
+    }
+
+    &_subscription {
+    }
+  }
+
+  &__arrow {
+    @include icons-font;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    color: $textColor_50;
+    font-size: 10px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &_down {
+      &::before {
+        content: '\e901';
+      }
+    }
+  }
+
+  &__arrow-subscription {
+    @include icons-font;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &::before {
+      content: '\e900';
+    }
+
+    &_with-gradient-fill {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

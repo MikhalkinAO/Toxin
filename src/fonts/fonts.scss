@@ -1,3 +1,5 @@
+/* -----Montserrat----- */
+
 @font-face {
   font-weight: 400;
   font-family: Montserrat;
@@ -18,4 +20,73 @@
     url('./Montserrat/Montserrat-Bold.woff') format('woff'),
     url('./Montserrat/Montserrat-Bold.ttf') format('truetype'),
     url('./Montserrat/Montserrat-Bold.svg') format('svg');
+}
+
+/* -----Icons-font----- */
+@font-face {
+  font-weight: normal;
+  font-family: Icons-font;
+  font-style: normal;
+  src: local('Icons-font'), url('./Icons-font/Icons-font.woff2') format('woff2'),
+    url('./Icons-font/Icons-font.woff') format('woff'),
+    url('./Icons-font/Icons-font.ttf') format('truetype'),
+    url('./Icons-font/Icons-font.svg') format('svg');
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-weight: normal;
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: Icons-font, sans-serif !important;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: never;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow_forward::before {
+  content: '\e900';
+}
+
+.icon-expand_more::before {
+  content: '\e901';
+}
+
+.icon-facebook::before {
+  content: '\e902';
+}
+
+.icon-favorite_border::before {
+  content: '\e903';
+}
+
+.icon-favorite::before {
+  content: '\e904';
+}
+
+.icon-insert_emoticon::before {
+  content: '\e905';
+}
+
+.icon-instagram::before {
+  content: '\e906';
+}
+
+.icon-location_city::before {
+  content: '\e907';
+}
+
+.icon-twitter::before {
+  content: '\e908';
+}
+
+.icon-whatshot::before {
+  content: '\e909';
 }

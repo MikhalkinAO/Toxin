@@ -47,16 +47,20 @@ module.exports = {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist')
   },
+  target: 'web',
   resolve: {
     extensions: ['.js', '.png'],  // расширения файлов которые автоматом подключаются при импортах, т.е. не нужно писать "import './post.js'", достаточно "import './post'"
     alias: {
+      '@': path.resolve(__dirname, 'src'),
       '@components': path.resolve(__dirname, 'src/components'),
-      '@': path.resolve(__dirname, 'src')
+      '@variables': path.resolve(__dirname, 'src/styles/variables.scss'),
+      '@mixins': path.resolve(__dirname, 'src/styles/mixins.scss')
     }
   },
   optimization: optimization(),
   devServer: {
-    hot: isDev,
+    hot: true,
+    static: true,
     compress: true,
     port: 8080,
     client: {
@@ -125,14 +129,14 @@ module.exports = {
         type: 'asset/resource',
         include: path.resolve(__dirname, 'src'),
         generator: {
-          filename: 'assets/images/[name].[contenthash].[ext]',
+          filename: 'assets/images/[name][contenthash][ext]',
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[name].[contenthash].[ext]'
+          filename: 'assets/fonts/[name][ext]'
         }
       }
     ]

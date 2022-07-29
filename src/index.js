@@ -1,2 +1,3 @@
-import 'pages/index/index';
-import 'pages/colors-types/colors-types';
+import './styles/reset.scss';
+import './styles/main.scss';
+import './fonts/fonts.scss';

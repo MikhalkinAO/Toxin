@@ -1,0 +1,6 @@
+include ../logo/logo
+
+mixin ui-header(background="white")
+    - var classHeader = background === "white" ? "ui-header_background_white" : "ui-header_background_gray"
+    header.ui-header(class=classHeader)
+        +logo("ui-kit")

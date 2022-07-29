@@ -1,0 +1,18 @@
+mixin radio(options = {})
+    -
+        const {
+            name = '',
+            title = '',
+            checked = false
+        } = options
+
+    label.radio
+        .radio__container
+            input&attributes({
+               class: 'radio__input',
+               type: 'radio',
+               name: name,
+               checked: checked
+            })
+            span.radio__box
+            span.radio__title= title

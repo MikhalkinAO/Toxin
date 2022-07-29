@@ -1,0 +1,61 @@
+extends ../../layouts/ui-kit-layout
+include ../../components/text-field/text-field
+include ../../components/radio/radio
+
+block content
+    main.form-elements
+        .form-elements__container
+            section.form-elements__text-fields
+                .form-elements__text-field-wrapper
+                    +text-field({
+                        type: "email",
+                        name: "email",
+                        placeholder: "Email"
+                    })
+                .form-elements__text-field-wrapper
+                    +text-field({
+                        type: "text",
+                        name: "text",
+                        value: "This is pretty awesome",
+                        placeholder: "This is pretty awesome",
+                        focused: true
+                    })
+                .form-elements__text-field-wrapper
+                    +text-field({
+                        type: "text",
+                        name: "date",
+                        placeholder: "ДД.ММ.ГГГГ",
+                        withMask: true
+                    })
+                .form-elements__text-field-wrapper
+                    +text-field({
+                        type: "text",
+                        name: "date-filter",
+                        placeholder: "ДД.ММ - ДД.ММ",
+                        readonly: true
+                    })
+                .form-elements__text-field-wrapper
+                    +text-field({
+                        type: "Email",
+                        name: "subscription",
+                        placeholder: "Email",
+                        isSubscription: true
+                    })
+                .form-elements__text-field-wrapper
+                    +text-field({
+                        type: "Email",
+                        name: "subscription",
+                        placeholder: "dd.mm.gg",
+                        withArrow: true
+                    })
+            section.form-elements__switchers
+                .form-elements__radio-wrapper
+                    +radio({
+                        name: "gender",
+                        title: "Мужчина",
+                        checked: true
+                    })
+                    +radio({
+                        name: "gender",
+                        title: "Женщина",
+                    })

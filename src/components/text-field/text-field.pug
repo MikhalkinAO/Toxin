@@ -1,0 +1,55 @@
+mixin text-field(options = {})
+    -
+        const {
+            type = "text",
+            name = "text-field",
+            value = "",
+            placeholder = "",
+            dataType = "",
+            focused = false,
+            readonly = false,
+            withMask = false,
+            withArrow = false,
+            isSubscription = false
+        } = options
+
+        const inputClass = "text-field__input"
+        const focusedClass = focused ? "text-field__input_focused" : ""
+        const withMaskClass = withMask ? "js-text-field__input_with-mask" : ""
+        const withArrowClass = withArrow ? "text-field__input_with-arrow" : ""
+        const isSubscriptionClass = isSubscription ? "text-field__input_subscription" : ""
+
+        const inputAttributes = {
+            class: [
+                inputClass,
+                focusedClass,
+                withMaskClass,
+                withArrowClass,
+                isSubscriptionClass
+            ],
+            type: type,
+            name: name,
+            value: value,
+            placeholder: placeholder,
+            "data-type": dataType,
+            readonly: readonly
+        }
+
+    .text-field
+        input&attributes(inputAttributes)
+        if withArrow
+            button&attributes({
+                class: [
+                    "text-field__arrow",
+                    "text-field__arrow_down"
+                ]
+            })
+        if isSubscription
+            button&attributes({
+                class: [
+                    "text-field__arrow-subscription",
+                    "text-field__arrow-subscription_with-gradient-fill"
+                ],
+                type: "submit",
+                name: "subscription"
+            })

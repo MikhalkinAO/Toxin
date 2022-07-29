@@ -1,0 +1,7 @@
+mixin logo(typeLogo= "logo")
+    .logo
+        a(href="/" class="logo__link")
+            if (typeLogo === "logo")
+                img(src=require(`@components/logo/img/logo.png`) alt= 'Логотип' class="logo__img")
+            else
+                img(src=require(`@components/logo/img/ui-logo.png`) alt= 'Логотип' class="logo__img")

@@ -1,0 +1,33 @@
+@import '@variables';
+
+@mixin font-h1 {
+  color: $mainTextColor;
+  font: 700 24px/29px $mainFont;
+}
+
+@mixin font-h2 {
+  color: $mainTextColor;
+  font: 700 19px/23px $mainFont;
+}
+
+@mixin font-h3 {
+  color: $mainTextColor;
+  font: 700 12px/15px $mainFont;
+}
+
+@mixin font-body {
+  color: $textColor_75;
+  font: 400 14px/24px $mainFont;
+}
+
+@mixin icons-font {
+  font: 400 1.2rem Icons-font, sans-serif;
+}
+
+@mixin hide-default-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

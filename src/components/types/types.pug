@@ -1,0 +1,10 @@
+mixin types(typesItems=[])
+    - var types = ["h1", "h2", "h3", "body"]
+
+    ul.types
+        each item in typesItems
+            - var {type, title, text} = item
+            - var classType = types.includes(type) && `types__item types__item_${type}`
+            li(class=classType)
+                p.types__title= title
+                p.types__text= text

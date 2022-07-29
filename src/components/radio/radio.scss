@@ -1,0 +1,56 @@
+@import '@variables';
+@import '@mixins';
+
+.radio {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  color: $textColor_50;
+
+  &__container {
+    cursor: pointer;
+  }
+
+  &__box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid $textColor_25;
+    border-radius: 50%;
+  }
+
+  &__input {
+    @include hide-default-box;
+
+    &:checked + .radio__box,
+    &:focus + .radio__box,
+    &:hover + .radio__box {
+      border-color: $secondColor;
+    }
+
+    &:checked ~ .radio__title,
+    &:focus ~ .radio__title,
+    &:hover ~ .radio__title {
+      color: $textColor_75;
+    }
+
+    &:checked + .radio__box::before {
+      position: absolute;
+      top: 7px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      background: $mainLinearGradient;
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  &__title {
+    @include font-body;
+
+    margin-left: 10px;
+  }
+}

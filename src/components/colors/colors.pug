@@ -1,8 +1,19 @@
-mixin colors
-    .colors
-        .colors__item
-            .colors__square(style=`background: green`)
-            .colors__descr
-                span.colors__title= 'a'
-                span.colors__subtitle= 's'
-                img(src=require(`@components/colors/img/img.jpeg`) alt= 'fsfsf')
+mixin colors(colorItems=[])
+    -
+        const colors = [
+        "dark-shade-100", "dark-shade-75", "dark-shade-50",
+        "dark-shade-25", "dark-shade-5",
+        "purple", "green"
+        ]
+
+    ul.colors
+        each item in colorItems
+            li.colors__item
+                -
+                    const {color, name, code} = item
+                    const classColor = colors.includes(color) && `colors__palette colors__palette_${color}`
+
+                div(class=classColor)
+                .colors__description
+                    p.colors__title= name
+                    p.colors__code= code
