@@ -3,18 +3,18 @@ $mainFont: montserrat, arial, sans-serif;
 
 //colors
 $mainTextColor: #1f2041;
-$textColor_75: rgba(31, 32, 65, 0.75);
-$textColor_50: rgba(31, 32, 65, 0.5);
-$textColor_25: rgba(31, 32, 65, 0.25);
-$textColor_5: rgba(31, 32, 65, 0.05);
+$textColor_75: rgb(31 32 65 / 75%);
+$textColor_50: rgb(31 32 65 / 50%);
+$textColor_25: rgb(31 32 65 / 25%);
+$textColor_5: rgb(31 32 65 / 5%);
 $secondColor: #bc9cff;
 $thirdColor: #6fcf97;
 
-$uiMainBackgroundColor: #ffffff;
-$uiSecondBackgroundColor: #F4F4F6;
+$uiMainBackgroundColor: #fff;
+$uiSecondBackgroundColor: #f4f4f6;
 
 //Gradient
-$mainLinearGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$mainLinearGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 
 //Border
 $mainBorder: 1px solid $textColor_25;

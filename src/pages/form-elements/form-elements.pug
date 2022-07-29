@@ -1,6 +1,7 @@
 extends ../../layouts/ui-kit-layout
 include ../../components/text-field/text-field
 include ../../components/radio/radio
+include ../../components/toggle/toggle
 
 block content
     main.form-elements
@@ -58,4 +59,14 @@ block content
                     +radio({
                         name: "gender",
                         title: "Женщина",
+                    })
+                .form-elements__toggle-wrapper
+                    +toggle({
+                        name: "special",
+                        checked: true,
+                        title: 'Получать спецпредложения'
+                    })
+                    +toggle({
+                        name: "special",
+                        title: 'Получать спецпредложения'
                     })

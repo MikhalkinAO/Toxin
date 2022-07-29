@@ -1,0 +1,50 @@
+@import "@variables";
+@import "@mixins";
+
+.toggle {
+  position: relative;
+  display: block;
+  color: $textColor_75;
+  cursor: pointer;
+
+  &__box {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: #ffffff;
+    border: $mainBorder;
+    border-radius: 10px;
+
+    &::before {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 3px;
+      left: 4px;
+      border-radius: 50%;
+      background: $textColor_25;
+      content: '';
+      transition: 0.4s;
+    }
+  }
+
+  &__input {
+    @include hide-default-box;
+
+    &:checked + .toggle__box,
+    &:hover + .toggle__box,
+    &:focus + .toggle__box {
+      border-color: $secondColor;
+    }
+
+    &:checked + .toggle__box::before {
+      transform: translateX(20px);
+      background: $mainLinearGradient;
+    }
+  }
+
+  &__title {
+    @include font-body;
+    margin-left: 50px;
+  }
+}

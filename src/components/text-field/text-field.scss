@@ -41,7 +41,7 @@
     color: $textColor_50;
     font-size: 10px;
     background-clip: text;
-    -webkit-background-clip: text;
+    background-clip: text;
     border: none;
     outline: none;
     cursor: pointer;
@@ -72,7 +72,7 @@
     &_with-gradient-fill {
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
       background-clip: text;
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }

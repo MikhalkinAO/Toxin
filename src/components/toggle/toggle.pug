@@ -1,4 +1,4 @@
-mixin radio(options = {})
+mixin toggle(options = {})
     -
         const {
             name = '',
@@ -6,12 +6,12 @@ mixin radio(options = {})
             checked = false
         } = options
 
-    label.radio
+    label.toggle
         input&attributes({
-            class: 'radio__input',
-            type: 'radio',
             name: name,
+            type: 'checkbox',
+            class: 'toggle__input',
             checked: checked
         })
-        span.radio__box
-        span.radio__title= title
+        span.toggle__box
+        span.toggle__title= title
