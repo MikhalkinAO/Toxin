@@ -1,0 +1,12 @@
+mixin like(options = {})
+    -
+        const {
+            count = '',
+            active = false
+        } = options
+
+        const activeClass = active ? "like__actived" : "";
+
+    label.like.js-like(class= activeClass)
+        span.like__icon
+        span.like__count= count

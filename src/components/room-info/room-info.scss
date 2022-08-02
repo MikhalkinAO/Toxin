@@ -1,0 +1,51 @@
+@import "@variables";
+@import "@mixins";
+
+.room-info {
+  @include font-body;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    @include icons-font;
+    margin-right: 10px;
+    font-size: 41px;
+    background: $mainLinearGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    &_emoticon::before {
+      content: '\e905';
+    }
+
+    &_location-city::before {
+      content: '\e907';
+    }
+
+    &_whatshot::before {
+      content: '\e909';
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__subtitle {}
+
+  &__line {
+    height: 1px;
+    background: rgba(31, 32, 65, 0.1);
+  }
+}

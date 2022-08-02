@@ -1,0 +1,39 @@
+@import "@variables";
+@import "@mixins";
+
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40px;
+  height: 20px;
+  border: $secondColorBorder;
+  border-radius: 10px;
+
+  &__icon {
+    color: $textColor_25;
+    &:before {
+      @include icons-font;
+      font-size: 12px;
+      content: '\e903';
+    }
+  }
+
+  &__count {
+    font: 400 10px/12px $mainFont;
+    color: $textColor_25;
+    margin-right: 5px;
+  }
+
+  &__actived .like__icon:before {
+      content: '\e904';
+  }
+
+  &__actived,
+  &:hover,
+  &:focus {
+    border: $mainBorder;
+    color: $secondColor;
+  }
+
+}

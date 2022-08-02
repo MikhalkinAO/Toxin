@@ -15,6 +15,7 @@ $uiSecondBackgroundColor: #f4f4f6;
 
 //Gradient
 $mainLinearGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$mainLinearGradientOpacity_50: linear-gradient(180deg, rgba(#bc9cff, 0.5) 0%, #8ba4f9 100%);
 
 //Border
 $mainBorder: 1px solid $textColor_25;

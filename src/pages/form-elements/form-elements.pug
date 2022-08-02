@@ -4,6 +4,11 @@ include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/rating/rating
 include ../../components/checkbox/checkbox
+include ../../components/bullet-list/bullet-list
+include ../../components/room-info/room-info
+include ../../components/checkbox-list/checkbox-list
+include ../../components/button/button
+include ../../components/like/like
 
 block content
     main.form-elements
@@ -81,9 +86,108 @@ block content
                         title: 'Можно курить',
                         checked: true
                     })
-                    +checkbox({
+                    +checkbox-list({
+                        title: 'expandable checkbox list',
+                        listItems: [
+                            {
+                                name: 'checkbox',
+                                title: 'Можно курить',
+                                checked: true
+                            },
+                            {
+                                name: 'checkbox',
+                                title: 'Можно курить',
+                                checked: true
+                            },
+                        ]
+                    })
+                    +checkbox-list({expandable: true,
+                        title: 'expandable checkbox list',
+                        openned: true,
+                        listItems: [
+                        {
                         name: 'checkbox',
                         title: 'Широкий коридор',
                         description: 'Ширина коридоров в номере не менее 91 см.',
                         isRich: true
+                        },
+                        {
+                            name: 'checkbox',
+                            title: 'Широкий коридор',
+                            description: 'Ширина коридоров в номере не менее 91 см.',
+                            isRich: true
+                        },
+                    ]})
+                .form-elements__bullet-list-wrapper
+                    +bullet-list([
+                        'Нельзя с питомцами',
+                        'Без вечеринок и мероприятий',
+                        'Время прибытия — после 13:00, а выезд до 12:00'
+                    ])
+                .form-elements__room-info-wrapper
+                    +room-info({
+                        icon: 'emoticon',
+                        title: 'Комфорт',
+                        subtitle: 'Шумопоглощающие стены',
+                        isBottomLine: true
                     })
+                    +room-info({
+                        icon: 'location-city',
+                        title: 'Удобство',
+                        subtitle: 'Окно в каждой из спален',
+                        isBottomLine: false
+                    })
+                .form-elements__button-wrapper
+                    +button({
+                        title: "click me",
+                        size: "small",
+                        textColor: "white",
+                        type: "fill",
+                    })
+                    +button({
+                        title: "click me",
+                        size: "small",
+                        textColor: "white",
+                        type: "fill",
+                        disabled: true
+                    })
+                    +button({
+                        title: "click me",
+                        size: "small",
+                        textColor: "purple",
+                        type: "border"
+                    })
+                    +button({
+                        title: "click me",
+                        size: "small",
+                        textColor: "purple",
+                        type: "border",
+                        disabled: true
+                    })
+                    +button({
+                        title: "click me",
+                        textColor: "purple",
+                        type: "text"
+                    })
+                    +button({
+                        title: "click me",
+                        textColor: "purple",
+                        type: "text",
+                        disabled: true
+                    })
+                    +button({
+                        title: "перейти к оплате",
+                        size: "big",
+                        textColor: "white",
+                        type: "fill",
+                        isArrow: true
+                    })
+                    +button({
+                        title: "перейти к оплате",
+                        size: "flexible",
+                        textColor: "white",
+                        type: "fill"
+                    })
+                .form-elements__like-wrapper
+                    +like({count: 12})
+                    +like({count: 3, active: true})

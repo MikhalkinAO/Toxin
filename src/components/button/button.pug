@@ -1,0 +1,41 @@
+mixin button(options = {})
+    -
+        const {
+          title = '',
+          size = '',
+          textColor = '',
+          type = '',
+          isArrow = false,
+          disabled = false
+        } = options
+
+        const buttonSize = {
+            small: "button_size_small",
+            big: "button_size_big",
+            flexible: "button_size_flexible"
+        }
+
+        const buttonTextColor = {
+            white: "button_text-color_white",
+            purple: "button_text-color_purple",
+            gray: "button_text-color_gray"
+        }
+
+        const buttonType = {
+            fill: "button_type_filled",
+            border: "button_type_bordered",
+            text: "button_type_text"
+        }
+
+        const classButtonArrow = isArrow ? "button_type_arrow" : ""
+
+    button&attributes({
+        class: [
+            "button",
+            buttonSize[size],
+            buttonTextColor[textColor],
+            buttonType[type],
+            classButtonArrow
+        ],
+        disabled: disabled,
+    })= title

@@ -1,0 +1,20 @@
+mixin room-info(options = {})
+    -
+        const {
+            icon = '',
+            title = '',
+            subtitle = '',
+            isBottomLine = true
+        } = options
+
+        const icons = ["emoticon", "location-city", "whatshot"];
+
+    .room-info
+        .room-info__wrapper
+            if (icons.includes(icon))
+                span.room-info__icon(class= `room-info__icon_${icon}`)
+            .room-info__description
+                span.room-info__title= title
+                span.room-info__subtitle= subtitle
+        if isBottomLine
+            hr.room-info__line

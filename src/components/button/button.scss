@@ -1,0 +1,86 @@
+@import "@variables";
+@import "@mixins";
+
+.button {
+  @include font-h3;
+  font-weight: 700;
+  border-radius: 22px;
+  max-height: 44px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+
+  &_size_small {
+    padding: 14px 20px 15px 20px;
+  }
+
+  &_size_big {
+    min-width: 320px;
+    padding: 14px 20px 15px 20px;
+  }
+
+  &_size_flexible {
+    padding: 9px 20px 10px 20px;
+  }
+
+  &_text-color_white {
+    color: #FFFFFF;
+  }
+
+  &_text-color_purple {
+    color: $secondColor;
+  }
+
+  &_text-color_gray {
+    color: $textColor_50;
+  }
+
+  &_type_filled {
+    background: $mainLinearGradient;
+
+    &:hover,
+    &:focus,
+    &:disabled {
+      background: $mainLinearGradientOpacity_50;
+    }
+  }
+
+  &_type_bordered {
+    background-image: $mainLinearGradient;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    box-shadow: inset 0 44px #fff;
+
+    &:hover,
+    &:focus,
+    &:disabled {
+      background-image: $mainLinearGradientOpacity_50;
+    }
+  }
+
+  &_type_text {
+    background: none;
+
+    &:hover,
+    &:focus,
+    &:disabled {
+      color: $textColor_50;
+    }
+  }
+
+  &_type_arrow {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      @include icons-font;
+      content: '\e900';
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 14px;
+    }
+  }
+
+}

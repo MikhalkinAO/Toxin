@@ -1,0 +1,24 @@
+include ../checkbox/checkbox
+
+mixin checkbox-list(options = {})
+    -
+        const {
+            expandable = false,
+            openned = false,
+            title = '',
+            listItems = [],
+        } = options
+
+    .checkbox-list
+        if expandable
+            details.checkbox-list__dropdown(open = openned)
+                summary.checkbox-list__title= title
+                ul.checkbox-list__items
+                    each item in listItems
+                        li.checkbox-list__item
+                            +checkbox(item)
+        else
+            ul.checkbox-list__items
+                each item in listItems
+                    li.checkbox-list__item
+                        +checkbox(item)
