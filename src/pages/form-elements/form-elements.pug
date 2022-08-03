@@ -9,6 +9,7 @@ include ../../components/room-info/room-info
 include ../../components/checkbox-list/checkbox-list
 include ../../components/button/button
 include ../../components/like/like
+include ../../components/comment/comment
 
 block content
     main.form-elements
@@ -191,3 +192,12 @@ block content
                 .form-elements__like-wrapper
                     +like({count: 12})
                     +like({count: 3, active: true})
+                .form-elements__comment-wrapper
+                    +comment({
+                        avatarName: "murad_sarafanov.jpg",
+                        nameUser: "Мурад Сарафанов",
+                        commentDate: "5 дней назад",
+                        likeCount: 12,
+                        likeActive: true,
+                        commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                    })

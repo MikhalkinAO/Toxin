@@ -11,4 +11,5 @@ import '@components/room-info/room-info';
 import '@components/checkbox-list/checkbox-list';
 import '@components/button/button';
 import '@components/like/like';
+import '@components/comment/comment';
 import './form-elements.scss';

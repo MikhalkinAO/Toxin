@@ -1,0 +1,30 @@
+include ../like/like
+
+mixin comment(options = {})
+    -
+        const {
+            avatarName = '',
+            nameUser = '',
+            commentDate = '',
+            likeCount = 0,
+            likeActive = false,
+            commentText = ''
+        } = options
+
+    .comment
+        .comment__header
+            img&attributes({
+                class: "comment__avatar",
+                src: require(`@components/comment/img/${avatarName}`),
+                alt: nameUser
+            })
+            .comment__description
+                p.comment__name-user= nameUser
+                p.comment__date= commentDate
+        .comment__body
+            .comment__like
+                +like({
+                    count: likeCount,
+                    active: likeActive
+                })
+            p.comment__text= commentText

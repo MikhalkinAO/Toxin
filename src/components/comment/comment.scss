@@ -1,0 +1,48 @@
+@import "@variables";
+@import "@mixins";
+
+.comment {
+  @include font-body;
+  max-width: 710px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+    border-radius: 50%;
+  }
+
+  &__description {
+    margin-left: 10px;
+  }
+
+  &__name-user {
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__date {
+    margin: 0;
+  }
+
+  &__body {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__like {
+    padding-left: 3px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+}
