@@ -7,8 +7,9 @@
   justify-content: space-around;
   width: 40px;
   height: 20px;
-  border: $secondColorBorder;
+  border: $mainBorder;
   border-radius: 10px;
+  cursor: pointer;
 
   &__icon {
     color: $textColor_25;
