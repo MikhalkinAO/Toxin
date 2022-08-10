@@ -1,0 +1,9 @@
+mixin heading(options = {})
+    -
+        const {
+            title = "",
+            level = "h3"
+        } = options
+        const tag = level;
+    .heading
+        #{tag}(class= `heading__title heading__title_level_${level}`)= title
