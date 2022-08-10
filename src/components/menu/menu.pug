@@ -1,0 +1,43 @@
+mixin menu(opitons = {})
+    -
+        const {
+            menuOrientation = 'horizontal',
+            menuList = []
+        } = options
+
+    if menuOrientation === 'horizontal'
+        ul.menu.menu_type_horizontal
+            each item in menuList
+                -
+                    const classLink = item.active
+                            ? "menu__link_active"
+                            : "menu__link"
+                if item.expandable
+                    details.menu__expandable
+                        summary.menu__expandable-title= item.name
+                        each data in item.submenu
+                        li.menu__item
+                            a&attributes({
+                                class: "menu__link",
+                                href: data.url
+                            })= data.name
+                else
+                    li.menu__item
+                        a&attributes({
+                            class: classLink,
+                            href: item.url
+                        })= item.name
+
+
+    if menuOrientation === 'vertical'
+        ul.menu.menu_type_vertical
+            each item in menuList
+                li.menu__item
+                    a&attributes({
+                        class: "menu__link",
+                        href: item.url
+                    })= item.name
+
+
+
+}
