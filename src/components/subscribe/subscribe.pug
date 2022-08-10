@@ -1,0 +1,23 @@
+include ../heading/heading
+include ../text-field/text-field
+
+mixin subscribe(options = {})
+    -
+        const {
+            title = '',
+            text = ''
+        } = options
+
+    .subscribe
+        +heading({
+            title: title,
+            level: 'h3'
+        })
+        if text
+            p.suscribe__text= text
+        +text-field({
+            type: "Email",
+            name: "subscription",
+            placeholder: "Email",
+            isSubscription: true
+        })

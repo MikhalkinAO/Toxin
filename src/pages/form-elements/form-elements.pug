@@ -1,6 +1,7 @@
 extends ../../layouts/ui-kit-layout
 
 include ../../components/text-field/text-field
+include ../../components/subscribe/subscribe
 include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/rating/rating
@@ -52,11 +53,8 @@ block content
                         readonly: true
                     })
                 .form-elements__text-field-wrapper
-                    +text-field({
-                        type: "Email",
-                        name: "subscription",
-                        placeholder: "Email",
-                        isSubscription: true
+                    +subscribe({
+                        title: "subscription text field"
                     })
                 .form-elements__text-field-wrapper
                     +text-field({
