@@ -1,0 +1,97 @@
+extends ../../layouts/ui-kit-layout
+
+include ../../components/header/header
+include ../../components/footer/footer
+
+block content
+    main.headers-footers
+        .header-footers__header
+            +header({
+            buttonLogin: 'Войти',
+            buttonRegister: 'Зарегистрироваться',
+            menu: {
+                menuOrientation: 'horizontal',
+                menuList: [
+                    {
+                        name: 'О нас',
+                        url: '#',
+                        active: true
+                    },
+                    {
+                        name: 'Услуги',
+                        expandable: true,
+                        submenu: [
+                            {
+                                name: "Мероприятия",
+                                url: "#"
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Вакансии',
+                        url: '#'
+                    },
+                    {
+                        name: 'Новости',
+                        url: '#'
+                    },
+                    {
+                        name: 'Соглашения',
+                        expandable: true,
+                        submenu: [
+                            {
+                                name: "Мероприятия",
+                                url: "#"
+                            }
+                        ]
+                    },
+                ]
+            }
+        })
+        .header-footers__header_signin
+            +header({
+            signin: true,
+            userName: "Юлий Цезарь",
+            menu: {
+                menuOrientation: 'horizontal',
+                menuList: [
+                    {
+                        name: 'О нас',
+                        url: '#',
+                        active: true
+                    },
+                    {
+                        name: 'Услуги',
+                        expandable: true,
+                        submenu: [
+                            {
+                                name: "Мероприятия",
+                                url: "#"
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Вакансии',
+                        url: '#'
+                    },
+                    {
+                        name: 'Новости',
+                        url: '#'
+                    },
+                    {
+                        name: 'Соглашения',
+                        expandable: true,
+                        submenu: [
+                            {
+                                name: "Мероприятия",
+                                url: "#"
+                            }
+                        ]
+                    },
+                ]
+            }
+        })
+        .header-footers__footer
+            +footer({
+
+            })

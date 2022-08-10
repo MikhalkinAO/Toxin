@@ -1,0 +1,26 @@
+@import "@variables";
+@import "@mixins";
+
+.heading {
+
+  &__title {
+    display: block;
+
+    &_level_h1 {
+      @include font-h1;
+      margin: 0;
+    }
+    &_level_h2 {
+      @include font-h2;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    &_level_h3 {
+      @include font-h3;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+
+  }
+}

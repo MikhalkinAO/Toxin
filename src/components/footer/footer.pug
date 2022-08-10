@@ -1,0 +1,40 @@
+mixin footer(options = {})
+    -
+        const {
+            logo = {},
+            description = "",
+            menu = {},
+            subscribe = {},
+            copyright = "",
+            social = [],
+            mobile = false
+        } = options
+
+    footer.footer
+        .footer__container
+            .footer__body
+                section.footer__about
+                    .footer__logo
+                        +logo()
+                    p.footer__description= description
+                section.footer__menu
+                    .footer__menu-column
+                        +menu(menu)
+                    .footer__menu-column
+                        +menu(menu)
+                    .footer__menu-column
+                        +menu(menu)
+                section.footer__subscribe
+                    +subscribe()
+            .footer__bottom
+                p.footer__copyright= copyright
+                section.footer__social
+                    each item in social
+                        a&attributes({
+                            class: [
+                                "footer__social-link",
+                                `footer__social-link_${item.title}`
+                            ],
+                            href: item.url,
+                            target: "_blank"
+                        })

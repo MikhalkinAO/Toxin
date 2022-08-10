@@ -1,0 +1,75 @@
+@import "@variables";
+@import "@mixins";
+
+.menu {
+  display: flex;
+  list-style: none;
+
+  &_type_horizontal {
+    flex-direction: row;
+    gap: 20px;
+    align-items: baseline;
+  }
+
+  &_type_vertical {
+    flex-direction: column;
+  }
+
+
+  &__expandable {
+    position: relative;
+    cursor: pointer;
+
+    &[open] > &-title:after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__expandable-title {
+    display: block;
+    font: 400 14px/17px $mainFont;
+    color: $textColor_50;
+
+    &::-webkit-details-marker,
+    &::marker {
+      display:none;
+    }
+
+    &::-moz-list-bullet {
+      list-style-type:none;
+    }
+
+    &:after {
+      display: inline-block;
+      @include icons-font;
+      font-size: 10px;
+      margin-left: 5px;
+      content: '\e901';
+    }
+
+    &:hover {
+      color: $textColor_75;
+    }
+  }
+
+  &__expandable-item {
+    position: absolute;
+  }
+
+  &__item {}
+
+  &__link {
+    font: 400 14px/17px $mainFont;
+    color: $textColor_50;
+    text-decoration: none;
+
+    &_active {
+      font-weight: 700;
+      color: $textColor_75;
+    }
+
+    &:hover {
+      color: $textColor_75;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "@variables";
+@import "@mixins";
+
+.range-slider {
+  max-width: 266px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include font-h3;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__value {
+    font: 400 12px/15px $mainFont;
+    text-transform: uppercase;
+    color: $textColor_50;
+    border: 0;
+  }
+
+  &__input {}
+
+  &__description {
+    font: 400 12px/14px $mainFont;
+    color: $textColor_50;
+  }
+
+  .irs--toxin {
+    height: 35px;
+
+    .irs-bar {
+      height: 6px;
+      top: 18px;
+      background: $secondLinearGradient;
+      border-radius: 3px;
+    }
+
+    .irs-handle {
+      top: 13px;
+      width: 16px;
+      height: 16px;
+      background: $secondLinearGradient;
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+    }
+
+    .irs-line {
+      background: #FFFFFF;
+      border-radius: 3px;
+      border: $mainBorder;
+      box-sizing: border-box;
+      height: 6px;
+      top: 18px;
+    }
+  }
+}
+

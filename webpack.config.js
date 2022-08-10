@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -80,6 +81,10 @@ module.exports = {
           chunks: [page],
         }),
     ),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
     new CleanWebpackPlugin(),
     //new CopyWebpackPlugin(//{
       //patterns: [
@@ -97,7 +102,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(c|sc)ss$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,

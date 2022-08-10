@@ -12,4 +12,7 @@ import '@components/checkbox-list/checkbox-list';
 import '@components/button/button';
 import '@components/like/like';
 import '@components/comment/comment';
+import '@components/range-slider/range-slider';
+import '@components/pagination/pagination';
+import '@components/heading/heading';
 import './form-elements.scss';

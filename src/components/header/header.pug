@@ -1,0 +1,38 @@
+include ../logo/logo
+include ../menu/menu
+include ../button/button
+
+mixin header(options= {})
+    -
+        const {
+            logo = '',
+            menu = {},
+            buttonLogin = '',
+            buttonRegister = '',
+            userName = '',
+            signin = false
+        } = options
+
+    header.header
+        .header__logo
+            +logo("logo")
+        .header__body
+            nav.header__menu
+                +menu(menu)
+            if signin
+                p.header__user= userName
+            else
+                .header__button-signin
+                    +button({
+                        title: buttonLogin,
+                        size: "flexible",
+                        textColor: "purple",
+                        type: "border"
+                    })
+                .header__button-signup
+                    +button({
+                        title: buttonRegister,
+                        size: "flexible",
+                        textColor: "white",
+                        type: "fill"
+                    })
