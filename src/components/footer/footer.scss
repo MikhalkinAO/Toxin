@@ -1,0 +1,134 @@
+@import "@variables";
+@import "@mixins";
+
+.footer {
+  width: 100%;
+  background: #FFFFFF;
+
+  &__container {
+    max-width: 1440px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 140px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    max-width: 260px;
+  }
+
+  &__logo {}
+
+  &__description {
+    @include font-body;
+    max-width: 260px;
+    margin: 0;
+  }
+
+  &__menu {
+    display: flex;
+    margin: 0 51px 0 40px;
+    gap: 57px;
+  }
+
+  &__menu-column {
+    min-width: 143px;
+  }
+
+  &__subscribe {
+    max-width: 260px;
+    min-width: 260px;
+  }
+
+  &__bottom {
+    width: 100%;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  }
+
+  &__bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 140px;
+  }
+
+
+  &__copyright {
+    font: 400 14px/17px $mainFont;
+    color: $textColor_75;
+    margin: 0;
+  }
+
+  &__social {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__social-link {
+    @include icons-font;
+    @include mainLinearGradient;
+    font-size: 24px;
+
+    &_twitter:before {
+      content: '\e908';
+    }
+
+    &_facebook:before {
+      content: '\e902';
+    }
+
+    &_instagram:before {
+      content: '\e906';
+    }
+  }
+
+
+  &_type_mobile {
+    .footer__menu,
+    .footer__subscribe,
+    .footer__description {
+      display: none;
+    }
+
+    .footer__body {
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      border: none;
+    }
+
+    .footer__bottom-container {
+      flex-direction: column;
+      gap: 25px;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__menu,
+    &__subscribe,
+    &__description {
+      display: none;
+    }
+
+    &__body {
+      justify-content: center;
+      gap: 20px;
+      border: none;
+      padding: 0;
+    }
+
+    &__bottom-container {
+      flex-direction: column;
+      gap: 25px;
+      padding: 0;
+    }
+  }
+}

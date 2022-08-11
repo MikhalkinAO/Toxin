@@ -93,5 +93,109 @@ block content
         })
         .header-footers__footer
             +footer({
+                logo: 'logo',
+                description: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+                menu: {
+                    column1: {
+                        menuOrientation: 'vertical',
+                        titleVertical: 'навигация',
+                        menuList: [
+                            {
+                                name: 'О нас',
+                                url: ''
+                            },
+                            {
+                                name: 'Новости',
+                                url: ''
+                            },
+                            {
+                                name: 'Служба поддержки',
+                                url: ''
+                            },
+                            {
+                                name: 'Услуги',
+                                url: ''
+                            },
+                        ]
+                    },
+                    column2: {
+                        menuOrientation: 'vertical',
+                        titleVertical: 'о нас',
+                        menuList: [
+                            {
+                                name: 'О сервисе',
+                                url: ''
+                            },
+                            {
+                                name: 'Наша команда',
+                                url: ''
+                            },
+                            {
+                                name: 'Вакансии',
+                                url: ''
+                            },
+                            {
+                                name: 'Инвесторы',
+                                url: ''
+                            },
+                        ]
+                    },
+                    column3: {
+                        menuOrientation: 'vertical',
+                        titleVertical: 'Служба поддержки',
+                        menuList: [
+                            {
+                                name: 'Соглашения',
+                                url: ''
+                            },
+                            {
+                                name: 'Сообщества',
+                                url: ''
+                            },
+                            {
+                                name: 'Связь с нами',
+                                url: ''
+                            },
+                        ]
+                    },
+                },
+                subscribe: {
+                    title: 'Подписка',
+                    text: 'Получайте специальные предложения и новости сервиса'
+                },
+                copyright: 'Copyright © 2018 Toxin отель. Все права защищены.',
+                social: [
+                    {
+                        name: 'twitter',
+                        url: 'https://twitter.com/'
+                    },
+                    {
+                        name: 'facebook',
+                        url: 'https://facebook.com/'
+                    },
+                    {
+                        name: 'instagram',
+                        url: 'https://instagram.com/'
+                    }
+                ]
+            })
 
+            +footer({
+                logo: 'logo',
+                copyright: 'Copyright © 2018 Toxin отель. Все права защищены.',
+                social: [
+                    {
+                        name: 'twitter',
+                        url: 'https://twitter.com/'
+                    },
+                    {
+                        name: 'facebook',
+                        url: 'https://facebook.com/'
+                    },
+                    {
+                        name: 'instagram',
+                        url: 'https://instagram.com/'
+                    }
+                ],
+                mobile: true
             })

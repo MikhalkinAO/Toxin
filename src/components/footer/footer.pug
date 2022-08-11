@@ -1,7 +1,11 @@
+include ../logo/logo
+include ../menu/menu
+include ../subscribe/subscribe
+
 mixin footer(options = {})
     -
         const {
-            logo = {},
+            logo = '',
             description = "",
             menu = {},
             subscribe = {},
@@ -10,7 +14,9 @@ mixin footer(options = {})
             mobile = false
         } = options
 
-    footer.footer
+        const classTypeFooter = mobile ? 'footer_type_mobile' : '';
+
+    footer.footer(class = classTypeFooter)
         .footer__container
             .footer__body
                 section.footer__about
@@ -19,22 +25,23 @@ mixin footer(options = {})
                     p.footer__description= description
                 section.footer__menu
                     .footer__menu-column
-                        +menu(menu)
+                        +menu(menu.column1)
                     .footer__menu-column
-                        +menu(menu)
+                        +menu(menu.column2)
                     .footer__menu-column
-                        +menu(menu)
+                        +menu(menu.column3)
                 section.footer__subscribe
-                    +subscribe()
+                    +subscribe(subscribe)
             .footer__bottom
-                p.footer__copyright= copyright
-                section.footer__social
-                    each item in social
-                        a&attributes({
-                            class: [
-                                "footer__social-link",
-                                `footer__social-link_${item.title}`
-                            ],
-                            href: item.url,
-                            target: "_blank"
-                        })
+                .footer__bottom-container
+                    p.footer__copyright= copyright
+                    section.footer__social
+                        each item in social
+                            a&attributes({
+                                class: [
+                                    "footer__social-link",
+                                    `footer__social-link_${item.name}`
+                                ],
+                                href: item.url,
+                                target: "_blank"
+                            })
