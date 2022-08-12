@@ -1,13 +1,13 @@
-@import "@variables";
-@import "@mixins";
+@import '@variables';
+@import '@mixins';
 
 .footer {
   width: 100%;
-  background: #FFFFFF;
+  background: #fff;
 
   &__container {
-    max-width: 1440px;
     min-width: 320px;
+    max-width: 1440px;
     margin: 0 auto;
   }
 
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     padding: 100px 140px;
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    border-bottom: 1px solid rgb(31 32 65 / 10%);
   }
 
   &__about {
@@ -24,18 +24,20 @@
     max-width: 260px;
   }
 
-  &__logo {}
+  &__logo {
+  }
 
   &__description {
     @include font-body;
+
     max-width: 260px;
     margin: 0;
   }
 
   &__menu {
     display: flex;
-    margin: 0 51px 0 40px;
     gap: 57px;
+    margin: 0 51px 0 40px;
   }
 
   &__menu-column {
@@ -43,13 +45,13 @@
   }
 
   &__subscribe {
-    max-width: 260px;
     min-width: 260px;
+    max-width: 260px;
   }
 
   &__bottom {
     width: 100%;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
   }
 
   &__bottom-container {
@@ -59,11 +61,10 @@
     padding: 20px 140px;
   }
 
-
   &__copyright {
-    font: 400 14px/17px $mainFont;
-    color: $textColor_75;
     margin: 0;
+    color: $textColor_75;
+    font: 400 14px/17px $mainFont;
   }
 
   &__social {
@@ -74,21 +75,21 @@
   &__social-link {
     @include icons-font;
     @include mainLinearGradient;
+
     font-size: 24px;
 
-    &_twitter:before {
+    &_twitter::before {
       content: '\e908';
     }
 
-    &_facebook:before {
+    &_facebook::before {
       content: '\e902';
     }
 
-    &_instagram:before {
+    &_instagram::before {
       content: '\e906';
     }
   }
-
 
   &_type_mobile {
     .footer__menu,
@@ -98,8 +99,8 @@
     }
 
     .footer__body {
-      justify-content: center;
       gap: 20px;
+      justify-content: center;
       padding: 0;
       border: none;
     }
@@ -119,10 +120,10 @@
     }
 
     &__body {
-      justify-content: center;
       gap: 20px;
-      border: none;
+      justify-content: center;
       padding: 0;
+      border: none;
     }
 
     &__bottom-container {

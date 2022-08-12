@@ -1,10 +1,10 @@
-@import "@variables";
-@import "@mixins";
+@import '@variables';
+@import '@mixins';
 
 .subscribe {
-
   &__text {
     @include font-body;
-    margin: 21px 0 20px 0;
+
+    margin: 21px 0 20px;
   }
 }

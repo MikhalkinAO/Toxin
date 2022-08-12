@@ -1,0 +1,144 @@
+@import '@variables';
+@import '@mixins';
+
+.air-datepicker {
+  min-width: 320px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+
+  &-nav {
+    padding: 20px 20px 30px;
+    border: none;
+  }
+
+  &__prev,
+  &__next {
+    background: none;
+    border: none;
+    outline: none;
+
+    &::before {
+      @include icons-font;
+
+      color: $secondColor;
+      content: '\e900';
+    }
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+  }
+
+  &__title {
+    @include font-h2;
+  }
+
+  &--content {
+    padding: 0 20px 21px 21px;
+  }
+
+  &-body--day-names {
+    margin: 0;
+  }
+
+  &-body--day-name {
+    @include font-h3;
+
+    padding-bottom: 12px;
+    color: $secondColor;
+    text-transform: none;
+  }
+
+  &-body--cells.-days- {
+    grid-auto-rows: 40px;
+  }
+
+  &-cell {
+    color: $textColor_25;
+    font: 400 12px/15px $mainFont;
+
+    &.-current- {
+      color: #fff;
+      font-weight: 700;
+      background: $secondLinearGradient;
+      border-radius: 22px;
+    }
+
+    &.-selected- {
+      color: #fff;
+      font-weight: 700;
+      background: $mainLinearGradient;
+      border: none;
+      border-radius: 22px;
+    }
+
+    &.-in-range- {
+      background: $mainLinearGradientOpacity_25;
+    }
+
+    &.-range-from- {
+      border: none;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: $mainLinearGradientOpacity_25;
+        border-radius: 50% 0 0 50%;
+        content: '';
+      }
+    }
+
+    &.-range-to- {
+      border: none;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: $mainLinearGradientOpacity_25;
+        border-radius: 0 50% 50% 0;
+        content: '';
+      }
+    }
+
+    &.-focus- {
+      background: #fff;
+    }
+  }
+
+  &--buttons {
+    padding: 0 20px 20px;
+    border: none;
+  }
+
+  &-button {
+    @include font-h3;
+
+    color: $secondColor;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $textColor_50;
+      background: none;
+    }
+  }
+
+  &__button-apply span {
+    justify-content: end;
+  }
+
+  &__button-clear span {
+    justify-content: start;
+  }
+}

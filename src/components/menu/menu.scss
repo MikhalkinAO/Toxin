@@ -1,5 +1,5 @@
-@import "@variables";
-@import "@mixins";
+@import '@variables';
+@import '@mixins';
 
 .menu {
   display: flex;
@@ -14,40 +14,39 @@
   &_type_vertical {
     flex-direction: column;
     gap: 20px;
-    padding: 0;
     margin-top: 21px;
+    padding: 0;
   }
-
 
   &__expandable {
     position: relative;
     cursor: pointer;
 
-    &[open] > &-title:after {
+    &[open] > &-title::after {
       transform: rotate(180deg);
     }
   }
 
   &__expandable-title {
     display: block;
-    font: 400 14px/17px $mainFont;
     color: $textColor_50;
+    font: 400 14px/17px $mainFont;
 
     &::-webkit-details-marker,
     &::marker {
-      display:none;
+      display: none;
     }
 
     &::-moz-list-bullet {
-      list-style-type:none;
+      list-style-type: none;
     }
 
-    &:after {
+    &::after {
       display: inline-block;
-      @include icons-font;
-      font-size: 10px;
       margin-left: 5px;
+      font-size: 10px;
       content: '\e901';
+      @include icons-font;
     }
 
     &:hover {
@@ -59,16 +58,17 @@
     position: absolute;
   }
 
-  &__item {}
+  &__item {
+  }
 
   &__link {
-    font: 400 14px/17px $mainFont;
     color: $textColor_50;
+    font: 400 14px/17px $mainFont;
     text-decoration: none;
 
     &_active {
-      font-weight: 700;
       color: $textColor_75;
+      font-weight: 700;
     }
 
     &:hover {

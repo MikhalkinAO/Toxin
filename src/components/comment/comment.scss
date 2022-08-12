@@ -1,8 +1,9 @@
-@import "@variables";
-@import "@mixins";
+@import '@variables';
+@import '@mixins';
 
 .comment {
   @include font-body;
+
   max-width: 710px;
 
   &__header {
@@ -14,9 +15,9 @@
   &__avatar {
     width: 48px;
     height: 48px;
-    border: 2px solid #FFFFFF;
-    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+    border: 2px solid #fff;
     border-radius: 50%;
+    filter: drop-shadow(0 10px 20px rgb(31 32 65 / 10%));
   }
 
   &__description {
@@ -24,8 +25,8 @@
   }
 
   &__name-user {
-    font-weight: 700;
     margin: 0;
+    font-weight: 700;
   }
 
   &__date {
@@ -44,5 +45,4 @@
   &__text {
     margin: 0;
   }
-
 }

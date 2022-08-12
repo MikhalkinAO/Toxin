@@ -9,14 +9,22 @@ $textColor_25: rgb(31 32 65 / 25%);
 $textColor_5: rgb(31 32 65 / 5%);
 $secondColor: #bc9cff;
 $thirdColor: #6fcf97;
-
 $uiMainBackgroundColor: #fff;
 $uiSecondBackgroundColor: #f4f4f6;
 
 //Gradient
 $mainLinearGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-$mainLinearGradientOpacity_50: linear-gradient(180deg, rgba(#bc9cff, 0.5) 0%, #8ba4f9 100%);
-$secondLinearGradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$mainLinearGradientOpacity_50: linear-gradient(
+  180deg,
+  rgba(#bc9cff, 0.5) 0%,
+  rgba(#8ba4f9, 0.5) 100%
+);
+$mainLinearGradientOpacity_25: linear-gradient(
+  180deg,
+  rgba(#bc9cff, 0.25) 0%,
+  rgba(#8ba4f9, 0.25) 100%
+);
+$secondLinearGradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
 //Border
 $mainBorder: 1px solid $textColor_25;

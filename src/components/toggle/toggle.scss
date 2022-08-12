@@ -1,5 +1,5 @@
-@import "@variables";
-@import "@mixins";
+@import '@variables';
+@import '@mixins';
 
 .toggle {
   position: relative;
@@ -11,20 +11,20 @@
     position: absolute;
     width: 40px;
     height: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
     border: $mainBorder;
     border-radius: 10px;
 
     &::before {
       position: absolute;
-      width: 12px;
-      height: 12px;
       top: 3px;
       left: 4px;
-      border-radius: 50%;
+      width: 12px;
+      height: 12px;
       background: $textColor_25;
-      content: '';
+      border-radius: 50%;
       transition: 0.4s;
+      content: '';
     }
   }
 
@@ -38,13 +38,14 @@
     }
 
     &:checked + .toggle__box::before {
-      transform: translateX(20px);
       background: $mainLinearGradient;
+      transform: translateX(20px);
     }
   }
 
   &__title {
     @include font-body;
+
     margin-left: 50px;
   }
 }

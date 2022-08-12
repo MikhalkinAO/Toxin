@@ -1,38 +1,38 @@
-@import "@variables";
-@import "@mixins";
+@import '@variables';
+@import '@mixins';
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 320px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 15px 140px;
-  max-width: 1440px;
-  min-width: 320px;
 
   &__logo {
-
   }
 
   &__body {
     display: flex;
-    align-items: center;
     gap: 20px;
+    align-items: center;
   }
 
   &__menu {
-
   }
 
   &__user {
-    font: 400 14px/17px $mainFont;
-    color: $textColor_50;
     padding: 6px 0 6px 20px;
-    border-left: 1px solid rgba(31, 32, 65, 0.1);
+    color: $textColor_50;
+    font: 400 14px/17px $mainFont;
+    border-left: 1px solid rgb(31 32 65 / 10%);
     cursor: pointer;
   }
 
-  &__button-signin {}
+  &__button-signin {
+  }
 
-  &__button-signup {}
+  &__button-signup {
+  }
 }

@@ -91,10 +91,10 @@
   content: '\e909';
 }
 
-.icon-star_border:before {
-  content: "\e911";
+.icon-star_border::before {
+  content: '\e911';
 }
 
-.icon-star:before {
-  content: "\e910";
+.icon-star::before {
+  content: '\e910';
 }

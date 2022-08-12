@@ -1,32 +1,33 @@
-@import "@variables";
-@import "@mixins";
+@import '@variables';
+@import '@mixins';
 
 .button {
   @include font-h3;
-  font-weight: 700;
-  border-radius: 22px;
+
   max-height: 44px;
-  border: none;
-  outline: none;
-  text-transform: uppercase;
+  font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 22px;
+  outline: none;
   cursor: pointer;
 
   &_size_small {
-    padding: 14px 20px 15px 20px;
+    padding: 14px 20px 15px;
   }
 
   &_size_big {
     min-width: 320px;
-    padding: 14px 20px 15px 20px;
+    padding: 14px 20px 15px;
   }
 
   &_size_flexible {
-    padding: 9px 20px 10px 20px;
+    padding: 9px 20px 10px;
   }
 
   &_text-color_white {
-    color: #FFFFFF;
+    color: #fff;
   }
 
   &_text-color_purple {
@@ -73,14 +74,13 @@
   &_type_arrow {
     position: relative;
 
-    &:after {
+    &::after {
       position: absolute;
-      @include icons-font;
-      content: '\e900';
       top: 50%;
-      transform: translate(0, -50%);
       right: 14px;
+      transform: translate(0, -50%);
+      content: '\e900';
+      @include icons-font;
     }
   }
-
 }

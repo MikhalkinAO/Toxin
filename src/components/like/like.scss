@@ -1,10 +1,10 @@
-@import "@variables";
-@import "@mixins";
+@import '@variables';
+@import '@mixins';
 
 .like {
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
   width: 40px;
   height: 20px;
   border: $mainBorder;
@@ -13,28 +13,29 @@
 
   &__icon {
     color: $textColor_25;
-    &:before {
+
+    &::before {
       @include icons-font;
+
       font-size: 12px;
       content: '\e903';
     }
   }
 
   &__count {
-    font: 400 10px/12px $mainFont;
-    color: $textColor_25;
     margin-right: 5px;
+    color: $textColor_25;
+    font: 400 10px/12px $mainFont;
   }
 
-  &__actived .like__icon:before {
-      content: '\e904';
+  &__actived .like__icon::before {
+    content: '\e904';
   }
 
   &__actived,
   &:hover,
   &:focus {
-    border: $mainBorder;
     color: $secondColor;
+    border: $mainBorder;
   }
-
 }
