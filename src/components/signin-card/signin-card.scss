@@ -1,0 +1,52 @@
+@import "@variables";
+@import "@mixins";
+
+.signin-card {
+  max-width: 380px;
+  min-width: 300px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 40px 30px 32px 30px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__title {
+    @include font-h1;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    margin-bottom: 30px;
+  }
+
+  &__fields {
+    margin-bottom: 20px;
+  }
+
+  &__field-login {
+    margin-bottom: 10px;
+  }
+
+  &__field-password {
+
+  }
+
+  &__submit {
+
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__question-text {
+    font: 400 14px/18px $mainFont;
+    color: #000;
+  }
+
+  &__question-button {
+
+  }
+}

@@ -1,7 +1,39 @@
 extends ../../layouts/ui-kit-layout
 
+include ../../components/signin-card/signin-card
 include ../../components/calendar/calendar
 
 block content
     +calendar()
+    +signin-card({
+        title: 'Войти',
+        loginInput: {
+            type: 'email',
+            name: 'email',
+            placeholder: 'Email',
+        },
+        passwordInput: {
+          type: 'password',
+          name: 'password',
+          placeholder: 'Пароль',
+        },
+        buttonSignin: {
+            title: 'войти',
+            size: 'big',
+            textColor: 'white',
+            variantButton: 'fill',
+            type: 'submit',
+            isArrow: true
+        },
+        question: {
+          text: 'Нет аккаунта на Toxin?',
+          button: {
+            title: 'создать',
+            size: 'small',
+            textColor: 'purple',
+            variantButton: 'border',
+            url: '#'
+          }
+        }
+    })
 

@@ -4,7 +4,9 @@ mixin button(options = {})
           title = '',
           size = '',
           textColor = '',
-          type = '',
+          type = 'button',
+          url = '',
+          variantButton = '',
           isArrow = false,
           disabled = false
         } = options
@@ -28,14 +30,22 @@ mixin button(options = {})
         }
 
         const classButtonArrow = isArrow ? "button_type_arrow" : ""
-
-    button&attributes({
-        class: [
+        const classButton = [
             "button",
             buttonSize[size],
             buttonTextColor[textColor],
-            buttonType[type],
+            buttonType[variantButton],
             classButtonArrow
-        ],
-        disabled: disabled,
-    })= title
+        ]
+
+    if url
+        a&attributes({
+          class: classButton,
+          href: url,
+        })= title
+    else
+        button&attributes({
+          class: classButton,
+          disabled: disabled,
+          type: type
+        })= title

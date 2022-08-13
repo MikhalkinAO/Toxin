@@ -1,0 +1,38 @@
+include ../heading/heading
+include ../text-field/text-field
+include ../button/button
+
+mixin signin-card(options = {})
+    -
+        const {
+          title = 'Войти',
+          action = '',
+          method = '',
+          loginInput = {},
+          passwordInput = {},
+          buttonSignin = {},
+          question = {}
+        } = options
+
+    .signin-card
+        .signin-card__title
+            +heading({
+              title: title,
+              level: 'h1'
+            })
+        form&attributes({
+          class: 'signin-card__form',
+          action: action,
+          method: method
+        })
+            .signin-card__fields
+                .signin-card__field-login
+                    +text-field(loginInput)
+                .signin-card__field-password
+                    +text-field(passwordInput)
+            .signin-card__submit
+                +button(buttonSignin)
+        .signin-card__question
+            p.signin-card__question-text= question.text
+            .signin-card__question-button
+                +button(question.button)
