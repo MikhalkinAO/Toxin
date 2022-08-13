@@ -1,0 +1,65 @@
+include ../heading/heading
+include ../text-field/text-field
+include ../radio/radio
+include ../toggle/toggle
+include ../button/button
+
+mixin signup-card(options = {})
+    -
+        const {
+          title = 'Регистрация аккаунта',
+          action = '',
+          method = '',
+          name = {},
+          surname = {},
+          gender = {},
+          birthday = {},
+          email = {},
+          password = {},
+          special = {},
+          submit = {},
+          question = {}
+        } = options
+
+    .signup-card
+        .signup-card__title
+          +heading({
+            title: title,
+            level: 'h1'
+          })
+        form&attributes({
+          class: '.signup-card__form',
+          action: action,
+          method: method
+        })
+            .signup-card__user
+                .signup-card__name
+                    +text-field(name)
+                .signup-card__surname
+                    +text-field(surname)
+            .signup-card__gender
+                +radio(gender.man)
+                +radio(gender.woman)
+            .signup-card__birthday
+                +heading({
+                  title: 'дата рождения',
+                  level: 'h3'
+                })
+                +text-field(birthday)
+            .signup-card__login
+                +heading({
+                    title: 'данные для входа в сервис',
+                    level: 'h3'
+                })
+                .signup-card__login_type_email
+                    +text-field(email)
+                .signup-card__login_type_password
+                    +text-field(password)
+            .signup-card__special
+                +toggle(special)
+            .signup-card__submit
+                +button(submit)
+        .signup-card__question
+            p.signup-card__question-text= question.text
+            .signup-card__question-button
+                +button(question.button)

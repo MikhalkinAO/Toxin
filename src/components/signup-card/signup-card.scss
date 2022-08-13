@@ -1,0 +1,67 @@
+@import "@variables";
+@import "@mixins";
+
+.signup-card {
+  max-width: 380px;
+  min-width: 300px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 40px 30px 30px 30px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__form {}
+
+  &__user {}
+
+  &__name {
+    margin-bottom: 10px;
+  }
+
+  &__surname {
+    margin-bottom: 10px;
+  }
+
+  &__gender {
+    margin-bottom: 20px;
+  }
+
+  &__birthday {
+    margin-bottom: 20px;
+  }
+
+  &__login {
+
+    &_type_email {
+      margin-bottom: 10px;
+    }
+
+    &_type_password {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__special {
+    margin-bottom: 20px;
+  }
+
+  &__submit {}
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  &__question-text {
+    font: 400 14px/18px $mainFont;
+    color: #000000;
+  }
+
+  &__question-button {}
+}

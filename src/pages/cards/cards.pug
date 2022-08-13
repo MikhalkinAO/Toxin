@@ -1,5 +1,6 @@
 extends ../../layouts/ui-kit-layout
 
+include ../../components/signup-card/signup-card
 include ../../components/signin-card/signin-card
 include ../../components/calendar/calendar
 
@@ -36,4 +37,68 @@ block content
           }
         }
     })
+    +signup-card({
+      title: 'Регистрация аккаунта',
+      name: {
+        name: 'name',
+        type: 'text',
+        placeholder: 'Имя',
+      },
+      surname: {
+        name: 'surname',
+        type: 'text',
+        placeholder: 'Фамилия',
+      },
+      gender: {
+        man: {
+          name: 'gender',
+          title: 'Мужчина',
+          checked: true
+        },
+        woman: {
+          name: 'gender',
+          title: 'Женщина'
+        }
+      },
+      birthday: {
+        name: 'birthday',
+        type: 'text',
+        placeholder: 'ДД.ММ.ГГГГ',
+        withMask: true
+      },
+      email: {
+        name: 'email',
+        type: 'email',
+        placeholder: 'Email'
+      },
+      password: {
+        name: 'password',
+        type: 'password',
+        placeholder: 'Пароль'
+      },
+      special: {
+        name: 'special',
+        title: 'Получать спецпредложения'
+      },
+      submit: {
+        title: 'перейти к оплате',
+        size: 'big',
+        textColor: 'white',
+        variantButton: 'fill',
+        type: 'submit',
+        isArrow: true
+      },
+      question: {
+        text: 'Уже есть аккаунт на Toxin',
+        button: {
+          title: 'войти',
+          size: 'small',
+          textColor: 'purple',
+          variantButton: 'border',
+          url: '#'
+        }
+      }
+
+    })
+
 

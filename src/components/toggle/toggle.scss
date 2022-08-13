@@ -3,7 +3,8 @@
 
 .toggle {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   color: $textColor_75;
   cursor: pointer;
 
