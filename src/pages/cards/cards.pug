@@ -12,11 +12,16 @@ block content
             type: 'email',
             name: 'email',
             placeholder: 'Email',
+            required: true,
+            autocomplete: 'email',
+            autofocus: true
         },
         passwordInput: {
           type: 'password',
           name: 'password',
           placeholder: 'Пароль',
+          required: true,
+          autocomplete: 'new-password'
         },
         buttonSignin: {
             title: 'войти',
@@ -43,11 +48,15 @@ block content
         name: 'name',
         type: 'text',
         placeholder: 'Имя',
+        required: true,
+        autocomplete: 'name',
       },
       surname: {
         name: 'surname',
         type: 'text',
         placeholder: 'Фамилия',
+        required: true,
+        autocomplete: 'surname'
       },
       gender: {
         man: {
@@ -64,17 +73,23 @@ block content
         name: 'birthday',
         type: 'text',
         placeholder: 'ДД.ММ.ГГГГ',
-        withMask: true
+        withMask: true,
+        required: true,
+        autocomplete: 'bday'
       },
       email: {
         name: 'email',
         type: 'email',
-        placeholder: 'Email'
+        placeholder: 'Email',
+        required: true,
+        autocomplete: 'email'
       },
       password: {
         name: 'password',
         type: 'password',
-        placeholder: 'Пароль'
+        placeholder: 'Пароль',
+        required: true,
+        autocomplete: 'current-password'
       },
       special: {
         name: 'special',
@@ -98,7 +113,6 @@ block content
           url: '#'
         }
       }
-
     })
 
 

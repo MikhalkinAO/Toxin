@@ -10,11 +10,17 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
+  &__form {}
+
+  &__wrapper {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
   &__title {
     margin-bottom: 20px;
   }
-
-  &__form {}
 
   &__user {}
 
@@ -31,10 +37,20 @@
   }
 
   &__birthday {
+    border: none;
+    padding: 0;
+    margin: 0;
     margin-bottom: 20px;
   }
 
+  &__birthday-title {}
+
   &__login {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &-title {}
 
     &_type_email {
       margin-bottom: 10px;

@@ -6,6 +6,9 @@ mixin text-field(options = {})
             value = "",
             placeholder = "",
             dataType = "",
+            required = false,
+            autocomplete = 'off',
+            autofocus = false,
             focused = false,
             readonly = false,
             withMask = false,
@@ -32,6 +35,9 @@ mixin text-field(options = {})
             value: value,
             placeholder: placeholder,
             "data-type": dataType,
+            required: required,
+            inputmode: inputmode,
+            autocomplete: "off",
             readonly: readonly
         }
 
