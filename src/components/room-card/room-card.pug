@@ -1,0 +1,33 @@
+include ../rating/rating
+
+mixin room-card(options = {})
+    -
+      const {
+        images = [],
+        numberRoom = {},
+        priceRoom = {},
+        rating = '',
+        countReviews = {}
+      } = options
+
+    .room-card
+        .room-card__images
+            each image in images
+                .room-card__item
+                    img.room-card__image(src=require(`@components/room-card/img/${image}`) alt='room-card')
+        .room-card__info
+            .room-card__description
+                .room-card__number
+                    span.room-card__prefix= numberRoom.prefix + ' '
+                    span.room-card__value= numberRoom.value
+                    span.room-card__class= numberRoom.class
+                .room-card__price
+                    span.room-card__price-value= priceRoom.value + ' '
+                    span.room-card__price-text= priceRoom.text
+            hr.room-card__line
+            .room-card__rating-review
+                .room-card__rating
+                    +rating(rating)
+                .room-card__review
+                    span.room-card__review-count= countReviews.value + ' '
+                    span.room-card__review-text= countReviews.text

@@ -3,6 +3,7 @@ extends ../../layouts/ui-kit-layout
 include ../../components/signup-card/signup-card
 include ../../components/signin-card/signin-card
 include ../../components/calendar/calendar
+include ../../components/room-card/room-card
 
 block content
     +calendar()
@@ -114,5 +115,37 @@ block content
         }
       }
     })
-
+    +room-card({
+      images: ["room-888-1.jpg", "room-888-2.jpg", "room-888-3.jpg"],
+      numberRoom: {
+        prefix: '№',
+        value: '888',
+        class: 'люкс'
+      },
+      priceRoom: {
+        value: '9 990₽',
+        text: 'в сутки'
+      },
+      rating: '5',
+      countReviews: {
+        value: '145',
+        text: 'Отзывов'
+      }
+    })
+    +room-card({
+      images: ["room-840-1.jpg", "room-840-2.jpg"],
+      numberRoom: {
+        prefix: '№',
+        value: '840'
+      },
+      priceRoom: {
+        value: '9 990₽',
+        text: 'в сутки'
+      },
+      rating: '4',
+      countReviews: {
+        value: '65',
+        text: 'Отзывов'
+      }
+    })
 

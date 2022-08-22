@@ -3,7 +3,7 @@
 
 .rating {
   @include icons-font;
-
+  font-size: 20px;
   display: flex;
   gap: 3px;
   background: $mainLinearGradient;

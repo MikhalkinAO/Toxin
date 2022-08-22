@@ -1,0 +1,198 @@
+@import "@variables";
+@import "@mixins";
+
+.room-card {
+
+  min-width: 270px;
+  max-width: 270px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+
+  &__images {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 151.38px;
+    border-radius: 4px 4px 0 0;
+
+    &:hover:before {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 42px;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+      content: '';
+    }
+
+    &:hover:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 42px;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      content: '';
+    }
+
+    &:hover .slick-arrow:before {
+      display: block;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 17px 10px 20px;
+  }
+
+  &__number {
+
+  }
+
+  &__prefix {
+    font: 700 14px/17px $mainFont;
+    color: $mainTextColor;
+  }
+
+  &__value {
+    @include font-h2;
+  }
+
+  &__class {
+    @include font-h3;
+    color: $secondColor;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-family: $mainFont;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  &__price-value {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__price-text {
+    font-size: 12px;
+  }
+
+  &__line {
+    height: 1px;
+    width: 230px;
+    background: rgba(31, 32, 65, 0.1);
+    border: 0;
+  }
+
+  &__rating-review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px 21px 20px;
+  }
+
+  &__rating {
+
+  }
+
+  &__review {
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  &__review-count {
+    font-weight: 700;
+  }
+
+  &__review-text {
+    font-weight: 400;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .slick-prev,
+  .slick-next {
+    @include icons-font;
+    font-size: 0;
+    z-index: 2;
+    &:before {
+      display: none;
+      font-size: 10px;
+      color: #FFFFFF;
+      content: '\e901';
+    }
+  }
+
+  .slick-prev {
+    left: 15px;
+    &:before {
+      transform: rotate(90deg);
+    }
+  }
+
+
+  .slick-next {
+    right: 15px;
+    &:before {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    margin: 0;
+    display: flex;
+    gap: 3.75px;
+  }
+
+  .slick-dots li {
+    list-style: none;
+  }
+
+  .slick-dots li button {
+    width: 7.5px;
+    height: 7.49px;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+    border-radius: 50%;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .slick-dots .slick-active button {
+    background: #FFFFFF;
+  }
+}
